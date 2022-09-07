@@ -67,13 +67,14 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '999899990001');
   })
 
-  it('should display infinity when dividing a number by 0', () => {
+  it('should display Not a number when dividing a number by 0', () => {
     cy.get('#number9').click();
     cy.get('#operator-divide').click();
     cy.get('#number0').click();
     cy.get('#number0').click();
     cy.get('#operator-equals').click();
-    cy.get('.display').should('contain', 'Infinity');
+    cy.get('.display').should('contain', 'Not a number');
   })
 
 })
+ 
